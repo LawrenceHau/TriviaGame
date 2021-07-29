@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <!-- Styling for score screen -->
+    <div class="scoreScreenStyling">
+        <!-- Score Text -->
+        <p id = "timer" class="scores">Timer:</p>
+        <p id = "score" class="scores">Score:</p>
+        <p id = "money" class="scores">Money:</p>
+    </div>
+        <!-- Button for viewing stats -->
+        <button class="modal-buttons" id="openModal">View Stats</button>
+        <!-- Creates Modal -->
+          <div id="modal">
+            <div id="modal-textbox">
+            <!-- content of modal -->
+              <h1>Your Stats</h1>
+              <p>You currently have answered x out of y correctly.</p>
+              <p>You have earned a total of x points </p>
+              <p>You have earned a total of x dollars</p>
+              <p>Displays questions and answers</p>
+              <!-- Creates id for Modal Footer CSS styling -->
+              <div id="modal-footer">
+                <!-- creates button for modal -->
+                <button class="modal-buttons" id="close" href="#">Close</button>
+              </div>
+            </div>
+          </div>
+    
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Text for question -->
+    <p id = "randomQuestion" class="randomQuestions"></p>
+    <br>
+    <!-- class for styling button -->
+    <div class="buttonStyling">
+        <button class="dropDown" id="answers">Answers</button>
+        <button class="buttons" id="submit">Submit</button>
+        <button class="buttons" id="hint">Hint?</button>
+        <button class="buttons" id="newQuesion">New Question?</button>
+    </div>
+    <script src = Game.js></script>
+</body>
+</html>

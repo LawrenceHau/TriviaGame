@@ -12,6 +12,7 @@
 	display:none
 	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
 }
+
 /* modal textbox: background white| modal size is 350x550pixels| rounds edges of modal|location of modal|shadow of modal|outer padding % larger than modal*/
 #modal-textbox {
 	background-color: white;
@@ -22,4 +23,5 @@
 	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 	padding: 2%;
 	line-height: auto;
+
 }
