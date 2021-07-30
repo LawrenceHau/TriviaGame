@@ -1,5 +1,5 @@
 /* modal set to:  fixed position|transparent|location|z index sets modal on top of body|overflow adds sidebar only when necessary|no display until button is clicked(js)  */
-#modal {
+.modal {
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
 	top: 0;
@@ -14,7 +14,7 @@
 }
 
 /* modal textbox: background white| modal size is 350x550pixels| rounds edges of modal|location of modal|shadow of modal|outer padding % larger than modal*/
-#modal-textbox {
+.modalContent {
 	background-color: white;
 	height: 350px;
 	width: 550px;
@@ -22,6 +22,6 @@
 	margin: 150px auto;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 	padding: 2%;
-	line-height: auto;
+	line-height: auto; 
 
 }

@@ -11,32 +11,28 @@
 
 
 
-    <!-- Styling for score screen -->
-    <div class="scoreScreenStyling">
-        <!-- Score Text -->
-        <p id = "timer" class="scores">Timer:</p>
-        <p id = "score" class="scores">Score:</p>
-        <p id = "money" class="scores">Money:</p>
+<!-- Styling for score screen -->
+<div class="scoreScreenStyling">
+<!-- Score Text -->
+  <p id = "timer" class="scores">Timer:</p>
+  <p id = "score" class="scores">Score:</p>
+  <p id = "money" class="scores">Money:</p>
+</div>
+    <!-- Opens the modal -->
+<button id = "statButton">Stat Button</button>
+    <!-- The actual modal -->
+    <div id = "statModal" class = modal>
+    <!-- modal content -->
+      <div class = "modalContent">
+        <button class = "close">&circlearrowleft;</button>
+        <h1>Your Stats</h1>
+        <p id = "answerRatio">You have answered x out of y correctly</p>
+        <p id = "totalPointsEarned">You have earned a total of: x points</p>
+        <p id = "totalMoneyEarned">You have earned a total of : $</p>
+        <p id = "questionsAndAnswers">These are the qustions you answered right!</p>  
+      </div>
     </div>
-        <!-- Button for viewing stats -->
-        <button class="modal-buttons" id="openModal">View Stats</button>
-        <!-- Creates Modal -->
-          <div id="modal">
-            <div id="modal-textbox">
-            <!-- content of modal -->
-              <h1>Your Stats</h1>
-              <p>You currently have answered x out of y correctly.</p>
-              <p>You have earned a total of x points </p>
-              <p>You have earned a total of x dollars</p>
-              <p>Displays questions and answers</p>
-              <!-- Creates id for Modal Footer CSS styling -->
-              <div id="modal-footer">
-                <!-- creates button for modal -->
-                <button class="modal-buttons" id="close" href="#">Close</button>
-              </div>
-            </div>
-          </div>
-    
+
     <br>
 
 
@@ -50,7 +46,7 @@
 
 
     <!-- Text for question -->
-    <p id = "randomQuestion" class="randomQuestions"></p>
+    <p id = "randomQuestion" class="randomQuestions">Your Question Is:</p>
     <br>
     <!-- class for styling button -->
     <div class="buttonStyling">
@@ -59,6 +55,7 @@
         <button class="buttons" id="hint">Hint?</button>
         <button class="buttons" id="newQuesion">New Question?</button>
     </div>
-    <script src = Game.js></script>
+    <script src = Game.js ></script>
+    <script src = statModal.js></script>
 </body>
 </html>
