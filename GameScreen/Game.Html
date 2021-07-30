@@ -46,7 +46,7 @@
 
 
 
-    
+
     <br>
 
 
@@ -65,7 +65,26 @@
     <!-- class for styling button -->
     <div class="buttonStyling">
         <button class="dropDown" id="answers">Answers</button>
-        <button class="buttons" id="submit">Submit</button>
+
+
+
+    <!-- Opens the modal -->
+    <button id = "submitButton">Submit</button>
+      <!-- The actual modal -->
+        <div id = "submitModal" class = modal>
+          <!-- modal content -->
+            <div class = "modalContent">
+              <button class = "close">&circlearrowleft;</button>
+              <h1>Your Stats</h1>
+              <p id = "answerResponse">Your answer was Correct/Incorrect</p>
+              <p id = "totalPointsEarned"></p>  
+            </div>
+          </div>
+          
+        
+
+
+
         <button class="buttons" id="hint">Hint?</button>
         <button class="buttons" id="newQuesion">New Question?</button>
     </div>
