@@ -17,3 +17,5 @@ window.onclick = function (e) {
         myStatModal.style.display = "none";
     }
 }
+
+//Create submit modal and buttons
