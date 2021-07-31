@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
-
 <!-- Styling for score screen -->
 <div class="scoreScreenStyling">
 <!-- Score Text -->
@@ -19,12 +16,7 @@
   <p id = "money" class="scores">Money:</p>
 </div>
 
-
-
-
-
-
-
+<!-- Stat Modal -->
     <!-- Opens the modal -->
 <button id = "statButton">Stat Button</button>
     <!-- The actual modal -->
@@ -39,35 +31,14 @@
         <p id = "questionsAndAnswers">These are the qustions you answered right!</p>  
       </div>
     </div>
-
-
-
-
-
-
-
-
     <br>
-
-
-
-
-
-
-
-
-
-
-
     <!-- Text for question -->
     <p id = "randomQuestion" class="randomQuestions">Your Question Is:</p>
     <br>
     <!-- class for styling button -->
     <div class="buttonStyling">
         <button class="dropDown" id="answers">Answers</button>
-
-
-
+<!-- submid modal -->
     <!-- Opens the modal -->
     <button id = "submitButton">Submit</button>
       <!-- The actual modal -->
@@ -80,13 +51,29 @@
               <p id = "totalPointsEarned"></p>  
             </div>
           </div>
-          
-        
+<!-- Hint Modal -->
+          <button id = "hintButton">Hint?</button>
+          <!-- The actual modal -->
+            <div id = "hintModal" class = modal>
+              <!-- modal content -->
+                <div class = "modalContent">
+                  <button class = "close">&circlearrowleft;</button>
+                  <h1>Your Stats</h1>
+                  <p id = "hintAnswer">Hint:</p>  
+                </div>
+              </div>
 
-
-
-        <button class="buttons" id="hint">Hint?</button>
-        <button class="buttons" id="newQuesion">New Question?</button>
+              <button id = "newQuestionButton">New Question?</button>
+              <!-- The actual modal -->
+                <div id = "submitModal" class = modal>
+                  <!-- modal content -->
+                    <div class = "modalContent">
+                      <button class = "close">&circlearrowleft;</button>
+                      <h1>Your Stats</h1>
+                      <p id = "answerResponse">Your answer was Correct/Incorrect</p>
+                      <p id = "totalPointsEarned"></p>  
+                    </div>
+                  </div>
     </div>
     <script src = Game.js ></script>
     <script src = Modals.js></script>
