@@ -8,74 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+
 <!-- Styling for score screen -->
 <div class="scoreScreenStyling">
 <!-- Score Text -->
-  <p id = "timer" class="scores">Timer:</p>
-  <p id = "score" class="scores">Score:</p>
-  <p id = "money" class="scores">Money:</p>
-</div>
-
-<!-- Stat Modal -->
-    <!-- Opens the modal -->
-<button id = "statButton">Stat Button</button>
-    <!-- The actual modal -->
-    <div id = "statModal" class = modal>
-    <!-- modal content -->
-      <div class = "modalContent">
-        <button class = "close">&circlearrowleft;</button>
-        <h1>Your Stats</h1>
-        <p id = "answerRatio">You have answered x out of y correctly</p>
-        <p id = "totalPointsEarned">You have earned a total of: x points</p>
-        <p id = "totalMoneyEarned">You have earned a total of : $</p>
-        <p id = "questionsAndAnswers">These are the qustions you answered right!</p>  
-      </div>
-    </div>
-    <br>
-    <!-- Text for question -->
-    <p id = "randomQuestion" class="randomQuestions">Your Question Is:</p>
-    <br>
-    <!-- class for styling button -->
-    <div class="buttonStyling">
-        <button class="dropDown" id="answers">Answers</button>
-<!-- submid modal -->
-    <!-- Opens the modal -->
-    <button id = "submitButton">Submit</button>
-      <!-- The actual modal -->
-        <div id = "submitModal" class = modal>
-          <!-- modal content -->
-            <div class = "modalContent">
-              <button class = "close">&circlearrowleft;</button>
-              <h1>Your Stats</h1>
-              <p id = "answerResponse">Your answer was Correct/Incorrect</p>
-              <p id = "totalPointsEarned"></p>  
-            </div>
-          </div>
-<!-- Hint Modal -->
-          <button id = "hintButton">Hint?</button>
-          <!-- The actual modal -->
-            <div id = "hintModal" class = modal>
-              <!-- modal content -->
-                <div class = "modalContent">
-                  <button class = "close">&circlearrowleft;</button>
-                  <h1>Your Stats</h1>
-                  <p id = "hintAnswer">Hint:</p>  
-                </div>
-              </div>
-
-              <button id = "newQuestionButton">New Question?</button>
-              <!-- The actual modal -->
-                <div id = "submitModal" class = modal>
-                  <!-- modal content -->
-                    <div class = "modalContent">
-                      <button class = "close">&circlearrowleft;</button>
-                      <h1>Your Stats</h1>
-                      <p id = "answerResponse">Your answer was Correct/Incorrect</p>
-                      <p id = "totalPointsEarned"></p>  
-                    </div>
-                  </div>
-    </div>
+  <p id = "score">score:</p>
+  <p id="scoreNumber">0</p>
+<br>
+<p class="" id="question"> Question goes here</p>
+<button id="yes">Yes</button>
+<button id="no">No</button>
     <script src = Game.js ></script>
-    <script src = Modals.js></script>
 </body>
 </html>
