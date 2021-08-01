@@ -55,13 +55,38 @@ const generateRandomQuestion = () => {
     // inserts inner html with question and button using bracket notation
     divQuest.innerHTML = `
     <p>${randQuest.question}</p>
-    <button class = "yes">Yes</button>
-    <button class = "no">No</button>
+    <button onclick = "HandleYes${(randQuest)}" class = "yes">Yes</button>
+    <button onclick = "HandleNo${(randQuest)}" class = "no">No</button>
     `
+    
     quest.appendChild(divQuest)
+
+
+
+
     return randQuest
 }
 
+function HandleYes(quest) {
+    if(quest.answers){
+        score += 5
+        console.log("Correct")
+    }else{
+        score -=5
+        console.log("Wrong")
+    }
+
+    function HandleNo(quest) {
+    if(quest.answers){
+        score += 5
+        console.log("Correct")
+    }else{
+        score -=5
+        console.log("Wrong")
+    }
+
+}
+}
 
 generateRandomQuestion()
 
