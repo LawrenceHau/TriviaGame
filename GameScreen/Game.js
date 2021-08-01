@@ -19,37 +19,52 @@ score = 0
 questionArr = [
     {
         question: '1+1 = 2',
-        answer: true
+        answer: true,
+        id:1
     },
     {
         question: '2+5 = 6',
-        answer: false
+        answer: false,
+        id:2
     },
     {
         question: '3+3=6',
-        answer: true
+        answer: true,
+        id:3
     },
     {
         question: '3+3=9',
-        answer: false
+        answer: false,
+        id:4
     },
 
 ]
 
+// Selects questions, copies array to use in function
+const quest = document.querySelector(".questions")
 let copyArr = questionArr
 
 //Generates random question
 const generateRandomQuestion = () => {
     let randQuest = copyArr[Math.floor(Math.random() * copyArr.length)]
+    // removes question used by filtering
+    copyArr = copyArr.filter(item => item.id !== randQuest.id)
+    // creates div with a class of question
+    let divQuest = document.createElement("div")
+    divQuest.className = "question"
+    // inserts inner html with question and button using bracket notation
+    divQuest.innerHTML = `
+    <p>${randQuest.question}</p>
+    <button class = "yes">Yes</button>
+    <button class = "no">No</button>
+    `
+    quest.appendChild(divQuest)
+    return randQuest
 }
 
 
+generateRandomQuestion()
 
-
-
-
-
-const quest = document.querySelector(".questions")
 
 // Question Array for each question
 
