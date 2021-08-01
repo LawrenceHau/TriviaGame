@@ -14,12 +14,18 @@
 <!-- Styling for score screen -->
 <div class="scoreScreenStyling">
 <!-- Score Text -->
-  <p id = "score">score:</p>
-  <p id="scoreNumber">0</p>
-<br>
-<p class="" id="question"> Question goes here</p>
-<button id="yes">Yes</button>
-<button id="no">No</button>
+<div class="top">
+  <h1>score:<span id = "score"></span></h1>
+  <p id = "timer">15 seconds</p>
+</div>
+
+<div class = "questions">
+    <p id="question"> Question goes here</p>
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+</div>
+
+
     <script src = Game.js ></script>
 </body>
 </html>
