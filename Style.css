@@ -1,14 +1,81 @@
+#myVideo {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.game{
+	background: rgb(0, 0, 0, 0.4);
+	color:white;
+	position:relative;
+	margin:0 auto;
+	padding: 0 auto;
+	width:fit-content;
+	height: fit-content;
+	border-radius: 20px;
+	padding-bottom: 20px;
+}
+
+#scorebox{
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 200px;
+	color:white;
+	position:relative;
+	margin:1 auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	padding: 0 auto ;	
+	width: 30vw;
+	display:flex;
+	justify-content:center;
+	text-align: center
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding:2rem;
+	font-size: 2.4rem;
+	position: relative;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding:2rem;
+	font-size: 2.4rem;
+	position: relative;
+}
 button{
 	cursor:pointer;
 	font-size: 2.4rem;
     padding: 2rem 0;
-    width: 30rem;
+    width: 10rem;
     text-align: center;
     margin-bottom: 1rem;
+	margin-left:1rem;
     text-decoration: none;
     color: rgb(28,26,26);
     background: linear-gradient(90deg, rgb(18,93,255) 0%, rgb(0,102,255)100%);
     border-radius: 4px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+	margin-bottom: 10px;
+    padding:1rem;
+	position: relative;
+	
 }
 
 button:hover {

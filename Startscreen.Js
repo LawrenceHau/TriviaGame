@@ -6,7 +6,7 @@ const generateRandomQuestion = () => {
     divQuest.className = "startButton"
     // inserts inner html with question and button using bracket notation| You can use on click inside of your HTML to handle an event used in a function
     divQuest.innerHTML = `
-    <p>Click here to start</p>
+    
     
     `
 
