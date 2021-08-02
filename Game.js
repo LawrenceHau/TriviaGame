@@ -1,19 +1,6 @@
-// Gets the question 
+// gets score, sets value of score to 0 
 let scoreStart = document.querySelector('#score')
 score = 0
-
-// let answer = null
-// // Gets yes and no buttons
-// const yes = document.querySelector('#yes')
-// const no = document.querySelector('#no')
-
-// Gives yes and no true and false values.
-// yes.value = true
-// no.value = false
-//  variables for current question & availiable questions
-// let currentQuestion = {}
-// let availiableQuestions = []
-// let totalQuestions = 0
 
 // Array for filling in question text
 questionArr = [
@@ -40,10 +27,13 @@ questionArr = [
 
 ]
 
-// Selects questions, copies array to use in function
+// Selects game|  end screen score wasn't working on a seperate HTML, so I created another body|  questions|
+const game = document.querySelector(".game")
+const endScreen = document.querySelector(".endScreen")
+endScreen.style.display = 'none'
 const quest = document.querySelector(".questions")
+// Creates a variable to use question array
 let copyArr = questionArr
-
 //Generates random question
 const generateRandomQuestion = () => {
     if(copyArr.length !== 0){
@@ -71,7 +61,7 @@ const generateRandomQuestion = () => {
     //Appends question element created in line 53
     quest.appendChild(divQuest)
 
-    // Event listener to give yes/no button
+    // Event listener for yes or no function| states if the answer is correct then +5 if the answer is incorrect -1
     btnYes.addEventListener("click", () => {
         if (randQuest.answer) {
             score +=5
@@ -84,7 +74,7 @@ const generateRandomQuestion = () => {
         quest.innerHTML = ""
         generateRandomQuestion()
     })
-
+//  Event listener for no function: if the answer is wrong -1 score, if the answer is right add 5
     btnNo.addEventListener("click", () => {
         if (randQuest.answer) {
             score -=1
@@ -100,57 +90,18 @@ const generateRandomQuestion = () => {
         
     })
 
-
     return randQuest
-    }else{
-        window.location.href = ""
+    }
+    else{
+        endScreen.style.display = `block`
+        game.style.display = `none`
+        let p = document.createElement('p')
+        p.innerText = `your score is ${score}/20`
+        
+        document.querySelector('.scoreBoard').appendChild(p)
+        
     }
 }
 
-
-
-
 //Calls function to generate random question on page start
 generateRandomQuestion()
-
-
-// Question Array for each question
-
-// questionArr.forEach(quest => {
-//     let divQues = document.createElement("div")
-//     divQues.className = "question"
-
-//     divQuest.innerHTML = `
-//     <p>${quest.question}</p>
-//     <button id ="yes">Yes</button>
-//     <button id="no">No</button>
-//     `
-// })
-
-
-
-
-//Testing yes and no values
-// function testYes(){
-//     console.log(yes.value)
-// }
-// yes.addEventListener('click', testYes)
-
-// function testNo(){
-//     console.log(no.value)
-// }
-// no.addEventListener('click', testNo)
-
-
-
-
-
-//  starts the game if score start is 0, and iterates over the availaible questions starts the get new question function
-// startGame = () => {
-//     getNewQuestion()
-// }
-// // Function for getting new question
-// getNewQuestion = () => {
-//     question.innerText = questionText;
-
-//     }
