@@ -1,27 +1,31 @@
-// document.write( '    <div class=\"bodycontent\"></div>\n' );
-// document.write( '    <video autoplay muted loop id=\"myVideo\">\n' );
-// document.write( '        <source src=\"/startScreenAnimatedBackgroundSource/c-o-animated-demacia.mp4.webm\" type=\"video/webm\">\n' );
-// document.write( '    </video>\n' );
-// document.write( '        <header id =\"viewWords\">\n' );
-// document.write( '<p class=\"introText\">This is a trivia game that will ask you questions based on the Mechanics of the game League of Legends\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>You will earn money and points for every question you get right</li>\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>You will lose points for any question you get wrong</li>\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>Points awarded are time based</li>\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>Money awarded is a flat value</li>\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>You can pay $100 for a hint</li>\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>If you do not have $100, then you will only gain half of the points, and no money for answering the question right</li>\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>If you answer the question wrong after using a hint you will lose double the points</li>\n' );
-// document.write( '    <br>\n' );
-// document.write( '    <li>You will not lose any points if you answer the question wrong, and spent money a hint</li>\n' );
-// document.write( '        \n' );
-// document.write( '</p>\n' );
-// document.write( '<br>\n' );
-// document.write( '<button class=\"startButton\"><a href=\"/GameScreen/Game.Html\">Start Game</a></button>\n' );
-// document.write( '</header>' );
+const quest = document.querySelector(".createStartButton")
+
+const generateRandomQuestion = () => {
+
+    let divQuest = document.createElement("div")
+    divQuest.className = "startButton"
+    // inserts inner html with question and button using bracket notation| You can use on click inside of your HTML to handle an event used in a function
+    divQuest.innerHTML = `
+    <p>Click here to start</p>
+    
+    `
+
+    let btnStart = document.createElement("button")
+    btnStart.innerText = "Start"
+
+
+    //Inserts button into divQuest
+    divQuest.appendChild(btnStart)
+    
+    //Appends question element created in line 53
+    quest.appendChild(divQuest)
+
+    btnStart.addEventListener("click", () => {
+        window.location = `Game.html`
+    }) 
+}
+
+
+
+generateRandomQuestion()
+
