@@ -64,11 +64,62 @@
 
 ![URL SECTION](./readmefiles/2.png)
 
-`line 133-143` creates the true or false button, and appends it to the div, then the yes and no button as well as the question. refer to `line 22 and 24` [here](./game.html)
+    creates the true or false button, and appends it to the div, then the yes and no button as well as the question.
+
+refer to line 22 and 24 [here](./game.html)
+
+`let btnYes = document.createElement("button")`
+
+`btnYes.innerText = "True"`
+
+`let btnNo = document.createElement("button")`
+
+`btnNo.innerText = "False"`
+
+`//Inserts button into divQuest`
+
+`divQuest.appendChild(btnYes)`
+
+`divQuest.appendChild(btnNo)`
 
 ![URL SECTION](./readmefiles/3.png)
 
-`line 144-175` gives the button click an event of if question is right +5 if wrong -5, it also holds variable for how many answers are correct.
+[**line 144-175**](./game.html)
+
+    gives the button click an event of if question is right +5 if wrong -5, it also holds variable for how many answers are correct.
+
+` btnYes.addEventListener("click", () => {`
+
+`if (randQuest.answer) {`
+
+`score +=5`
+
+`answeredCorrect += 1`
+
+`console.log("correct")`
+
+`console.log(answeredCorrect)`
+
+`} else {`
+
+`score -=5`
+
+`answeredCorrect = answeredCorrect`
+
+`console.log("wrong")`
+
+`console.log(answeredCorrect)`
+
+`}`
+
+`scoreStart.innerText = score`
+
+`quest.innerHTML = ""`
+
+`generateRandomQuestion()`
+
+`})`
+
 ![URL SECTION](./readmefiles/4.gif)
 
 `line 182~` displays the end screen, and turns off the game screen. it appends your final score, as well as answers you have gotten correct. also creates two buttons which restarts the game [here](./index.html), and the other one sends you to my github [here](https://github.com/LawrenceHau)
