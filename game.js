@@ -208,7 +208,7 @@ const generateRandomQuestion = () => {
         }) 
 
         buttonGit.addEventListener("click", () => {
-            location.href =  `https://github.com/LawrenceHau"`
+            location.href =  `https://github.com/LawrenceHau`
         }) 
     }
 }
