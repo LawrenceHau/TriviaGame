@@ -21,7 +21,7 @@ const generateRandomQuestion = () => {
     quest.appendChild(divQuest)
 
     btnStart.addEventListener("click", () => {
-        window.location = `Game.html`
+        window.location = `game.html`
     }) 
 }
 
