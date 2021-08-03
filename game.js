@@ -138,8 +138,6 @@ const generateRandomQuestion = () => {
     //Inserts button into divQuest
     divQuest.appendChild(btnYes)
     divQuest.appendChild(btnNo)
-    
-    //Appends question element created in line 53
     quest.appendChild(divQuest)
 
     // Event listener for yes or no function| states if the answer is correct then +5 if the answer is incorrect -1
