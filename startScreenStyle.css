@@ -6,9 +6,7 @@
     top: 0;
     left: 0;
 }
-body {
-    margin: 0;
-  }
+
   #viewWords {
     position: relative;
     margin: 0 auto;
@@ -19,7 +17,6 @@ body {
     padding: 10px;
     top: 200px;
     width:fit-content;
-    
     
   }
 

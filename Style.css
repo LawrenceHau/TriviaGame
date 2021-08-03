@@ -7,9 +7,28 @@
     left: 0;
 }
 
+#scorebox{
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 200px;
+	color:white;
+	position:relative;
+	margin:0 auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	padding: 0 auto ;	
+	width: fit-content;
+	height: fit-content;
+	display:flex;
+	justify-content:center;
+	text-align: center;
+	min-width: 20rem;
+	
+	
+	
+}
 
-.game{
-	background: rgb(0, 0, 0, 0.4);
+.endScreen {
+	background: rgb(0, 0, 0, 0.5);
 	color:white;
 	position:relative;
 	margin:0 auto;
@@ -20,20 +39,19 @@
 	padding-bottom: 20px;
 }
 
-#scorebox{
-	background: rgba(0, 0, 0, 0.7);
-	border-radius: 200px;
+
+.game{
+	background: rgb(0, 0, 0, 0.5);
 	color:white;
 	position:relative;
-	margin:1 auto;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	padding: 0 auto ;	
-	width: 30vw;
-	display:flex;
-	justify-content:center;
-	text-align: center
+	margin:0 auto;
+	padding: 0 auto;
+	width:fit-content;
+	height: fit-content;
+	border-radius: 20px;
+	padding-bottom: 20px;
 }
+
 
 .top{
     display: flex;
@@ -89,4 +107,8 @@ button[disabled]:hover{
     cursor:not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+.gitHub {
+	width:fit-content;
 }
