@@ -204,7 +204,7 @@ const generateRandomQuestion = () => {
         
 
         buttonRestart.addEventListener("click", () => {
-            window.location = `Index.html`
+            window.location = `index.html`
         }) 
 
         buttonGit.addEventListener("click", () => {
