@@ -1,48 +1,43 @@
 # Trivia Game
 
-## **Index and related files**
+## **index.html**
 
-**index.html**
+    script src = startscreen.js
+    stylesheet = startScreenStyle.css
+    id viewWords styles the list, and the start button
+    class createStartButton used in startscreen.js
 
-`line 15` contains `header id = viewWords ` to style everything within in CSS
+contains `<li>` within `<p>` that give the instructions of the game
 
-`line 25` contains `div class = "createStartButton"` used to create a start button in _startscreen.js_
+## **startscreen.js**
 
-`line 27` contains `script src = startscreen.js`
+    const createButton selects class createStartButton in index.html
+    function = generateButton
 
-##
+Creates start button function by creating a div with a button
 
-**startscreen.js**
+- creates div w/ class startButton
 
-`line 1` creates const called createButton
+- appends button to div
 
-`line 3-26` Create button function
+- appends div to createButton
 
-`line 5 and 6` create a div with a class of startButton
+- calls function generateButton
 
-`line 9 and 10` creates a button with an inner text of start
+- when you click the button the window goes to [game.html](./game.html)
 
-`line 13` appends button into div
-
-`line 15` appends div into query selector
-
-`line 17-18` when you click the button the window goes to game.html
-
-`line 24` calls function in line 3
-
-![URL SECTION](./readmefiles/start.gif)
+<img src="./readmefiles/start.gif" width="800">
 
 ---
 
-## Game and related files
+## **game.html**
 
-**game.html**
+    div class top
 
-`line 13 to 15` autoplays a muted looped video in the background styled in css
-
+allows styling of scoreboard
 `line 17` grabs the scorebox to allow styling in css
 
-`line 18` creates a header for the scorebox, **span id** used in JS to input score function
+creates a `header` with a `span` within with an id of score **span id** used in JS to input score function
 
 `line 22` creates a class called game
 
@@ -60,67 +55,45 @@
 
 `line 1-3 refers to score class`[used here](./game.html) in `line 22`
 
-`line 7-109` creates an array of questions used in function `line 119-131`
+Created variable **`questionsArr`** to create an array of questions to be used in functions
 
-![URL SECTION](./readmefiles/2.png)
+creates the true or false button, and appends it to the div, then the yes and no button as well as the question. refer to line 22 and 24 [here](./game.html)
 
-    creates the true or false button, and appends it to the div, then the yes and no button as well as the question.
+    Variable questionArr is an array containing a list of questions, answers and question ids
+    Constant game selects the Class of game in [game./html](./game.html)
+    Variable scoreStart selects the ID score used in [game.html](./game.html)
+    Variable score will be used to store questions answered correctly in function
+    Function generateRandomQuestionLength
+    Variable btnYes = True
+    Variable btnNo = False
+    Variable answeredCorrect stores the amount of answers you answered correctly
+    finalScore.innerText displays your final score out of 100
+    finalCorrect displays how many questions you have answered correctly
 
-refer to line 22 and 24 [here](./game.html)
+- removes questions used through filtering
 
-`let btnYes = document.createElement("button")`
+- creates div with class **question** and inserts a random question
 
-`btnYes.innerText = "True"`
+<img src="./readmefiles/2.png" width="800">
 
-`let btnNo = document.createElement("button")`
+- creates True and False buttons
 
-`btnNo.innerText = "False"`
+<img src="./readmefiles/3.png" width="800">
 
-`//Inserts button into divQuest`
+- creates functions to adds and subtracts score based on questions answered correctly when buttons are pressed
 
-`divQuest.appendChild(btnYes)`
+<img src="./readmefiles/4.gif" width="800">
 
-`divQuest.appendChild(btnNo)`
+- if answered correctly the answered correct variable will go up by 1 and will be displayed at the result screen
 
-![URL SECTION](./readmefiles/3.png)
+- if you have answered all of the questions then the end of the screen will display your score results, and how many questions you answered correctly
 
-[**line 144-175**](./game.html)
+<img src="./readmefiles/5.gif" width="800">
 
-    gives the button click an event of if question is right +5 if wrong -5, it also holds variable for how many answers are correct.
+- creates a restart button that returns you to [index.html](./index.html)
 
-` btnYes.addEventListener("click", () => {`
+<img src="./readmefiles/restart.gif" width="800">
 
-`if (randQuest.answer) {`
+- creates a button that links to my [github](https://github.com/LawrenceHau)
 
-`score +=5`
-
-`answeredCorrect += 1`
-
-`console.log("correct")`
-
-`console.log(answeredCorrect)`
-
-`} else {`
-
-`score -=5`
-
-`answeredCorrect = answeredCorrect`
-
-`console.log("wrong")`
-
-`console.log(answeredCorrect)`
-
-`}`
-
-`scoreStart.innerText = score`
-
-`quest.innerHTML = ""`
-
-`generateRandomQuestion()`
-
-`})`
-
-![URL SECTION](./readmefiles/4.gif)
-
-`line 182~` displays the end screen, and turns off the game screen. it appends your final score, as well as answers you have gotten correct. also creates two buttons which restarts the game [here](./index.html), and the other one sends you to my github [here](https://github.com/LawrenceHau)
-![URL SECTION](./readmefiles/5.gif)
+<img src="./readmefiles/github.gif" width="800">
