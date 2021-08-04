@@ -2,6 +2,9 @@
 let scoreStart = document.querySelector('#score')
 score = 0
 answeredCorrect = 0
+const timeDisplay = document.querySelector('#timer');
+let timeLeft = 15;
+timeDisplay.innerText = `Timer: ${timeLeft} seconds` ;
 
 // Array for filling in question text
 questionArr = [
@@ -108,6 +111,14 @@ questionArr = [
 
 ]
 
+
+
+minusScore = setInterval(()=>{
+    if(timeLeft <= 0)
+    score -= 1
+    scoreStart.innerText = score
+    }, 1000);
+
 // Selects game|  end screen score wasn't working on a seperate HTML, so I created another body|  questions|
 const game = document.querySelector(".game")
 const endScreen = document.querySelector(".endScreen")
@@ -135,21 +146,46 @@ const generateRandomQuestion = () => {
 
     let btnNo = document.createElement("button")
     btnNo.innerText = "False"
+
     //Inserts button into divQuest
     divQuest.appendChild(btnYes)
     divQuest.appendChild(btnNo)
     quest.appendChild(divQuest)
+
+
+    
+    const countDown = setInterval(()=>{
+        timeLeft --;
+        timeDisplay.innerText = `Timer: ${timeLeft} seconds` ; 
+        if(timeLeft < 0||timeLeft < 1)
+        clearInterval(countDown)
+        
+        
+        }, 1000);
+    
+    minusScore = setInterval(()=>{
+        if(timeLeft <= 0)
+        score -= 1
+        scoreStart.innerText = score
+        clearInterval(minusScore)
+        }, 1000);
 
     // Event listener for yes or no function| states if the answer is correct then +5 if the answer is incorrect -1
     btnYes.addEventListener("click", () => {
         if (randQuest.answer) {
             score +=5
             answeredCorrect += 1
+            clearInterval(countDown)
+            clearInterval(minusScore)
+            timeLeft = 16
             console.log("correct")
             console.log(answeredCorrect)
         } else {
             score -=5
             answeredCorrect = answeredCorrect
+            clearInterval(countDown)
+            clearInterval(minusScore)
+            timeLeft = 16
             console.log("wrong")
             console.log(answeredCorrect)
         }
@@ -162,11 +198,17 @@ const generateRandomQuestion = () => {
         if (randQuest.answer) {
             score -=5
             answeredCorrect = answeredCorrect
+            clearInterval(countDown)
+            clearInterval(minusScore)
+            timeLeft = 16
             console.log("wrong")
             console.log(answeredCorrect)
         } else {
             score +=5
             answeredCorrect += 1
+            clearInterval(countDown)
+            clearInterval(minusScore)
+            timeLeft = 16
             console.log("correct")
             console.log(answeredCorrect)
         }
@@ -213,4 +255,4 @@ const generateRandomQuestion = () => {
 
 //Calls function to generate random question on page start
 generateRandomQuestion()
-//need edit to push
+

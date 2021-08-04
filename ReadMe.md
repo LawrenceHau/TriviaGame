@@ -112,7 +112,7 @@ stores the amount of answers you answered correctly
 
 - if you have answered all of the questions then the end of the screen will display your score results, and how many questions you answered correctly
 
-<img loop src="./readmefiles/5.gif" width="800">
+<img src="./readmefiles/5.gif" width="800">
 
 - creates a restart button that returns you to [index.html](./index.html)
 
@@ -121,3 +121,7 @@ stores the amount of answers you answered correctly
 - creates a button that links to my [github](https://github.com/LawrenceHau)
 
 <img src="./readmefiles/github.gif" width="800">
+
+---
+
+## Background is from RiotGames™
