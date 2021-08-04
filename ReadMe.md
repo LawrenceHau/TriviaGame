@@ -35,39 +35,63 @@ Creates start button function by creating a div with a button
     div class top
 
 allows styling of scoreboard
-`line 17` grabs the scorebox to allow styling in css
 
-creates a `header` with a `span` within with an id of score **span id** used in JS to input score function
+    header id scorebox
 
-`line 22` creates a class called game
+contains word score:
 
-`line 23` creates id timer will be used to add timer, still need **js function for this** also will be used to style css
+    header>span id score
 
-`line 24` creates div for questions, used to input questions in JS
+contains the score that will be changed in js function
 
-`line 30` end screen div used to style end screen
+    div class game
 
-`line 32` thank youf or playing text
+will insert the timer and the questions
 
-`line 34` scoreboard used to display scoreboard results, functions used in game js
+    p id timer
+
+still requires coding for functionality
+
+    div class endScreen
+
+contains thank you for playing text
+
+    span class scoreBoard
+
+uses js to display final results of the game as well as my github, and restart button
 
 **game.js**
 
-`line 1-3 refers to score class`[used here](./game.html) in `line 22`
+    Variable questionArr
 
-Created variable **`questionsArr`** to create an array of questions to be used in functions
+Array containing a list of questions, answers and question ids
 
-creates the true or false button, and appends it to the div, then the yes and no button as well as the question. refer to line 22 and 24 [here](./game.html)
+    Constant game
 
-    Variable questionArr is an array containing a list of questions, answers and question ids
-    Constant game selects the Class of game in [game./html](./game.html)
-    Variable scoreStart selects the ID score used in [game.html](./game.html)
-    Variable score will be used to store questions answered correctly in function
+selects the Class of game in [game./html](./game.html)
+
+    Variable scoreStart
+
+selects the ID score used in [game.html](./game.html)
+
+    Variable score
+
+used to store questions answered correctly in function
+
     Function generateRandomQuestionLength
+
     Variable btnYes = True
     Variable btnNo = False
-    Variable answeredCorrect stores the amount of answers you answered correctly
+
+value of True = True
+value of False = False
+
+    Variable answeredCorrect
+
+stores the amount of answers you answered correctly
+
     finalScore.innerText displays your final score out of 100
+
     finalCorrect displays how many questions you have answered correctly
 
 - removes questions used through filtering
@@ -88,7 +112,7 @@ creates the true or false button, and appends it to the div, then the yes and no
 
 - if you have answered all of the questions then the end of the screen will display your score results, and how many questions you answered correctly
 
-<img src="./readmefiles/5.gif" width="800">
+<img loop src="./readmefiles/5.gif" width="800">
 
 - creates a restart button that returns you to [index.html](./index.html)
 
