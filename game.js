@@ -153,14 +153,11 @@ const generateRandomQuestion = () => {
     quest.appendChild(divQuest)
 
 
-    
     const countDown = setInterval(()=>{
         timeLeft --;
         timeDisplay.innerText = `Timer: ${timeLeft} seconds` ; 
         if(timeLeft < 0||timeLeft < 1)
         clearInterval(countDown)
-        
-        
         }, 1000);
     
     minusScore = setInterval(()=>{
@@ -224,18 +221,21 @@ const generateRandomQuestion = () => {
     else{
         endScreen.style.display = `block`
         game.style.display = `none`
+
         let finalScore = document.createElement('p')
         finalScore.innerText = `Your score is ${score}/100`
+
         let finalCorrect = document.createElement('p')
         finalCorrect.innerText = `You have answered ${answeredCorrect}/20 correctly`
-        
-        
-        
+
         document.querySelector('.scoreBoard').appendChild(finalScore)
         document.querySelector('.scoreBoard').appendChild(finalCorrect)
+
         let buttonRestart = document.createElement('button')
+
         buttonRestart.innerText = (`Restart`)
         buttonRestart.innerText = "Restart"
+
         let buttonGit = document.createElement('button')
         buttonGit.className = "gitHub"
         buttonGit.innerText = `Support My Github`
